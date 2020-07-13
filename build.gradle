@@ -2,6 +2,8 @@ plugins {
     id 'org.springframework.boot' version '2.3.1.RELEASE'
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id 'java'
+    id 'jacoco'
+    id 'com.github.kt3k.coveralls' version '2.8.4'
 }
 
 group = 'com.example'
@@ -29,11 +31,6 @@ dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
-}
-
-plugins {
-    id 'jacoco'
-    id 'com.github.kt3k.coveralls' version '2.8.4'
 }
 
 jacocoTestReport {
