@@ -12,5 +12,15 @@ cache:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
 
+#빌드 전 권한 추가
+before_install:
+  - chmod +x gradlew
+
 # clean 후 Build (Build시 자동으로 test 수행)
 script: "./gradlew clean build"
+
+# 빌드 메일 알람
+notification:
+  email:
+    recipients:
+      - ldb955@telefield.com
