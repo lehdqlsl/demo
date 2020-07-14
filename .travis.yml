@@ -23,7 +23,9 @@ addons:
   sonarcloud:
     organization: "lehdqlsl"
     token:
-      secure: $SONARCLOUD_API_KEY2
+      secure: "QJK63jAGPafgjQ9IPAFPr97rBltRPdVWcjO8BRW3UhzJTKQrVmvWamLjwjPeA8rsntn1dli7S8U5ubXCvTS3trT/hltNewa546GNUrEHVpLxy3qHWR0P9l84jVEkj9epHppZioykcnrvku9ALB0nVzRFvUPa8wn6IRkivg/qJQjOWrybI5apnHcs74+SVthczWmqzWC9XOHMNkWHgiZPcy1FUM2Mm
+      ivFqS+3MxriWCDaiN1cGCKPK6+8U/lnUj/z4Sdz/0ndWdTyV0fuNmO/3/iGa56Q/8h2NJbalT008PQvNUM1J6Nbwv3jU+YJNAku2wS1rN05CLH/lRvIH/7lWdChKM1hDexNKe5kHwNF2jtGyLV4U/ookL8dmis16bd/WNhSosFaY9hu1y4/YEku46E+aHi9GMEdmt+Rgbc1fFQd2QgLjo6xYZjGHX56a37bgk4UP
+      HOhXoqvarzoODKu8glSvgAe247v93zIJz8+71ez670ecbyI/B4rTCZ70gjO/8pkveEAS39syBYs7d/aKDoqVzXzSQy8dctbuKwum53cP8dxrzyEIN3NSwQYiwdR5xmODc2Hhl/q6XjSIXES2xfPVtinn7Am+ZoHHToQ2/f9CxDQ+BquyUZQ69Uy8pxP0fkTAoQEUxZyjEjM7s6Xfii1GhUjyPE4jPxv46ZNrNE="
 
 after_success:
   - ./gradlew sonarqube
