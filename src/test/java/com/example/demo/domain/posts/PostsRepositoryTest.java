@@ -1,5 +1,6 @@
 package com.example.demo.domain.posts;
 
+import com.example.demo.dto.posts.PostsSaveRequestDto;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -45,6 +46,25 @@ public class PostsRepositoryTest {
                 .content("테스트 본문")
                 .author("lehdqlsl@naver.com")
                 .build());
+
+        //when
+        List<Posts> postsList = postsRepository.findAll();
+
+        //then
+        Posts posts = postsList.get(0);
+        assertTrue(posts.getCreateTime().isBefore(now));
+        assertTrue(posts.getUpdateTime().isBefore(now));
+    }
+
+    @Test
+    public void 커버리지를올리기위해_DTO테스트(){
+        //given
+        LocalDateTime now = LocalDateTime.now();
+        PostsSaveRequestDto dto = new PostsSaveRequestDto();
+        dto.setAuthor("작성자");
+        dto.setContent("내용");
+        dto.setTitle("제목");
+        postsRepository.save(dto.toEntity());
 
         //when
         List<Posts> postsList = postsRepository.findAll();
