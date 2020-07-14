@@ -24,6 +24,9 @@ after_success:
 
 # 빌드 메일 알람
 notification:
+  webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
   email:
     recipients:
       - ldb955@telefield.com
+
+
