@@ -23,7 +23,7 @@ addons:
   sonarcloud:
     organization: "lehdqlsl"
     token:
-      secure: eb485fbfebc3322d0c054ebab45c24c29803d666
+      secure: $SONARCLOUD_API_KEY
 
 after_success:
   - ./gradlew sonarqube
