@@ -19,8 +19,15 @@ before_install:
 # clean 후 Build (Build시 자동으로 test 수행)
 script: "./gradlew clean build"
 
+addons:
+  sonarcloud:
+    organization: "lehdqlsl"
+    token:
+      secure: ae08d2486e2eadb3e508830d898c56045a248775
+
 after_success:
   - ./gradlew jacocoTestReport coveralls
+  - ./gradlew sonarqube
 
 # 빌드 메일 알람
 notification:
@@ -29,4 +36,4 @@ notification:
     recipients:
       - ldb955@telefield.com
 
-
+        travis encrypt ae08d2486e2eadb3e508830d898c56045a248775
